@@ -13,10 +13,7 @@ $(document).ready(function(){
 
 	carregarPokemons();
 
-	//-------------------------//
 	//-------EJERCICIO 1-------//
-	//-------------------------//
-
 	//Añadimos una función si hacemos click en alguna de las imágenes
 	$(".pokemon-img").on("click", cambioPokemon);
 
@@ -36,11 +33,7 @@ $(document).ready(function(){
 		});
 	}
 	
-
-	//-------------------------//
 	//-------EJERCICIO 2-------//
-	//-------------------------//
-
 	//Función que cambia los datos del pj seleccionado
 	function completarDatos(pokemon, datos){
 		//Cambiamos el nombre y el tipo
