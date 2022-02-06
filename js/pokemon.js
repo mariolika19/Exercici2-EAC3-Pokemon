@@ -27,6 +27,7 @@ $(document).ready(function(){
 		$.ajax({
 			url: "https://pokeapi.co/api/v2/pokemon/" + id,
 			method:'get',
+			dataType: "json",
 			success: function (datos) {
 				completarDatos(pokemon, datos)
 			}	
@@ -56,6 +57,5 @@ $(document).ready(function(){
 		//Cambiamos las imágenes
 		$(".pokemon-imatges").find("img:first").attr("src", datos.sprites.front_default);   //La delantera
 		$(".pokemon-imatges").find("img:last").attr("src", datos.sprites.back_default);	    //La trasera
-		
 	}
 });
