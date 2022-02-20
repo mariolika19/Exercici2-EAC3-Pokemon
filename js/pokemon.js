@@ -18,9 +18,8 @@ $(document).ready(function(){
 	$(".pokemon-img").on("click", cambioPokemon);
 
 	//Función que realizará la llamada a AJAX
-	function cambioPokemon(){
-		let pokemon = $(this).closest(".informacio");
-		//Cogemos el valor id de la imagen que hemos clickeado
+	function cambioPokemon(){		
+		//Cogemos el valor id de la imagen clickeada
 		let id = $(this).data("id");
 
 		//Hacemos la llamada a AJAX de tipo GET
@@ -29,14 +28,14 @@ $(document).ready(function(){
 			method:'get',
 			dataType: "json",
 			success: function (datos) {
-				completarDatos(pokemon, datos)
+				completarDatos(datos)
 			}	
 		});
 	}
 	
 	//-------EJERCICIO 2-------//
 	//Función que cambia los datos del pj seleccionado
-	function completarDatos(pokemon, datos){
+	function completarDatos(datos){
 		//Cambiamos el nombre y el tipo
 		$(".pokemon-nom").text(datos.name);  
 		$("#tipus").text(datos.types[0].type.name);	
